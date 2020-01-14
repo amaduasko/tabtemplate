@@ -8,8 +8,5 @@ import { Component, OnInit, Input } from "@angular/core";
 export class TabsComponent implements OnInit {
   constructor() {}
   @Input() tabs: number[];
-  ngOnInit() {
-    console.log(this.tabs);
-    //console.log(`>>> TestComponent ${this.tabs} initialized`);
-  }
+  ngOnInit() {}
 }

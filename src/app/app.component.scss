@@ -9,6 +9,9 @@
   font-size: 20px;
   font-family: monospace;
   background-color: gray;
+  &:hover {
+    cursor: pointer;
+  }
 }
 .content {
   display: block;

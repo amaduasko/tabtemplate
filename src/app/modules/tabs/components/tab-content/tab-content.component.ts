@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
+import { TabService } from "src/app/services/tab.service";
 
 @Component({
   selector: "tab-content",
@@ -7,6 +8,5 @@ import { Component, OnInit } from "@angular/core";
 })
 export class TabContentComponent implements OnInit {
   constructor() {}
-
   ngOnInit() {}
 }
