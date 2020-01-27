@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { TabService } from "src/app/services/tab.service";
 
 @Component({
   selector: "tab",
@@ -6,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./tab.component.scss"]
 })
 export class TabComponent implements OnInit {
-  constructor() {}
+  constructor(public service: TabService) {}
 
   ngOnInit() {}
 }

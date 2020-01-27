@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "tabs",
@@ -7,6 +7,5 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class TabsComponent implements OnInit {
   constructor() {}
-  @Input() tabs: number[];
   ngOnInit() {}
 }

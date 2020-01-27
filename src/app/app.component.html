@@ -8,12 +8,12 @@
 <br />
 
 <tabs>
-  <tab class="tab" *ngFor="let tab of tabService.tabInfoArray">
-    <tab-title class="title" (click)="changeView(tab)">
-      Tab <b>{{ tab.id }}</b> title
+  <tab *ngFor="let tab of tabs">
+    <tab-title>
+      Tab <b>{{ tab }}</b> title
     </tab-title>
-    <tab-content *ngIf="tab.show" class="content">
-      Tab <b>{{ tab.id }}</b> content
+    <tab-content>
+      Tab <b>{{ tab }}</b> content
       <test [tab]="tab"></test>
     </tab-content>
   </tab>

@@ -4,18 +4,15 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class TabService {
-  tabInfoArray: any[] = [];
-  prev = (a: boolean) => !a;
+  tab: number = 1;
+  tabArray: number[] = [1];
   constructor() {}
-  objetizeTab(item) {
-    this.tabInfoArray.push({
-      id: item,
-      show: item == 1 ? true : false
-    });
+  decTabValue(): void {
+    this.tab -= 1;
+    this.tabArray.pop();
   }
-  updateView(tab) {
-    this.tabInfoArray.find(item => item.id === tab.id).show = this.prev(
-      this.tabInfoArray.find(item => item.id === tab.id).show
-    );
+  incTabValue(): void {
+    this.tab += 1;
+    this.tabArray.push(this.tab);
   }
 }

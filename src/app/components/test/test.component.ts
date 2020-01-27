@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, OnDestroy } from "@angular/core";
+import { TabService } from "src/app/services/tab.service";
 
 @Component({
   selector: "test",
@@ -7,9 +8,13 @@ import { Component, OnInit, Input } from "@angular/core";
   `
 })
 export class TestComponent implements OnInit {
+  constructor(private service: TabService) {}
   @Input() tab: number;
-
   public ngOnInit() {
+    this.service.incTabValue();
     console.log(`>>> TestComponent ${this.tab} initialized`);
+  }
+  public ngOnDestroy() {
+    this.service.decTabValue();
   }
 }

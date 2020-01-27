@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { TabService } from "src/app/services/tab.service";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "tab-content",
